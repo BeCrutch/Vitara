@@ -1,0 +1,104 @@
+.header-topline {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 12px;
+	&__languages {
+		display: flex;
+		justify-content: flex-end;
+		a {font-weight: 700}
+		span {font-weight: 400}
+		.lang-item {
+			text-transform: uppercase;
+			&:first-child {
+				position: relative;
+				margin-right: 12px;
+
+				&::after {
+					content: '/';
+					position: absolute;
+					top: 0;
+					right: -8px;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+}
+.rd-navbar-nav-wrap.rd-navbar-search_not-collapsable {
+	@media(min-width: 992px) {
+		padding-right: 85px;
+	}
+}
+.rd-navbar-nav-wrap.rd-navbar-search_not-collapsable {
+	@media(min-width: 992px) {
+		position: relative;
+		justify-content: center;
+	}
+}
+.rd-navbar-items-list.rd-navbar-search_collapsable {
+	@media(min-width: 992px) {
+		position: absolute;
+		right: 0;
+	}
+}
+
+.header-favorites-count {
+	position: absolute;
+    top: 5px;
+    right: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2px 3px;
+	min-width: 16px;
+	height: 16px;
+	border-radius: 50px;
+	font-size: 10px;
+	line-height: 1;
+	background-color: #ec485c;
+	color: #fff;
+    @media (min-width: 992px) {
+        top: -8px;
+        right: -5px;
+    }
+}
+
+.rd-navbar-static .rd-navbar-nav {
+    @media (min-width: 992px) {
+        display: flex;
+
+        & > li {
+            display: flex;
+
+            & > a {
+                white-space: nowrap;
+                @media (min-width: 992px) and (max-width: 1199.98px) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+.rd-navbar-panel.rd-navbar-search_collapsable {
+    @media (min-width: 1200px) and (max-width: 1500px) {
+        padding-bottom: 15px;
+    }
+}
+.rd-navbar-items-list.rd-navbar-search_collapsable {
+    @media (min-width: 992px) and (max-width: 1200px) {
+        position: absolute;
+        top: -60px;
+    }
+}
+
+.rd-navbar-wrap {
+    @media (max-width: 991.98px) {
+        height: 0 !important;
+    }
+}
+
+.rd-navbar-search_collapsable {
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        padding-top: 10px;
+    }
+}

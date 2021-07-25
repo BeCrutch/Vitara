@@ -1,0 +1,17 @@
+.idea
+/node_modules
+/resources/lang/ru.json
+/resources/lang/uk.json
+/public/hot
+/public/storage
+/storage/logs/*.log
+/public/robots.txt
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
