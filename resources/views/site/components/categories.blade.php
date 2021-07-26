@@ -1,15 +1,23 @@
 @php($categories = $categories ?? \App\Category::joinLocalization()->where('details->published', 1)->where('details->is_menu_item', 1)->get()->toTree())
-<ul class="{{ $ul_class }}">
-    @foreach($categories as $category)
-        @if($category->children->isNotEmpty())
-            <li class="rd-navbar--has-dropdown rd-navbar-submenu">
-                <a href="{{ route('site.resource', $category->slug) }}">{!! $category->getData('name') !!}</a>
-                @include('site.components.categories', ['categories' => $category->children, 'ul_class' => 'rd-navbar-dropdown'])
-            </li>
-        @else
+<div class="mega-menu-category">
+    <ul class="nav">
+        @foreach($categories as $category)
             <li>
-                <a href="{{ route('site.resource', $category->slug) }}">{!! $category->getData('name') !!}</a>
+                <a href="{{ route('site.resource', $category->slug) }}">
+                    <i class="fa fa-file-text"></i> {!! $category->getData('name') !!}
+                </a>
+                <div class="wrap-popup column1">
+                    <div class="popup">
+                        <ul class="nav">
+                            @foreach($category->children as $cat)
+                                <li>
+                                    <a href="{{ route('site.resource', $cat->slug) }}">{!! $cat->getData('name') !!}</a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
             </li>
-        @endif
-    @endforeach
-</ul>
+        @endforeach
+    </ul>
+</div>

@@ -54,7 +54,7 @@
                             <div class="range range-xs-center range-70">
                                 @foreach($products as $product)
                                     <div class="cell-sm-4 cell-lg-3">
-                                        @include('site.components.product')
+                                        @include('site.product.product')
                                     </div>
                                 @endforeach
                             </div>

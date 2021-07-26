@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -88350,14 +88350,26 @@ tinymce_tinymce__WEBPACK_IMPORTED_MODULE_0___default.a.init(config);
 
 /***/ }),
 
-/***/ 1:
-/*!**************************************************************!*\
-  !*** multi ./resources/js/admin/resourses/create-or-edit.js ***!
-  \**************************************************************/
+/***/ "./resources/sass/site/app.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/site/app.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 0:
+/*!*********************************************************************************************!*\
+  !*** multi ./resources/js/admin/resourses/create-or-edit.js ./resources/sass/site/app.scss ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Project\OpenServer\domains\lidz.ua.local\resources\js\admin\resourses\create-or-edit.js */"./resources/js/admin/resourses/create-or-edit.js");
+__webpack_require__(/*! D:\Program Files\OpenServer\domains\store.local\resources\js\admin\resourses\create-or-edit.js */"./resources/js/admin/resourses/create-or-edit.js");
+module.exports = __webpack_require__(/*! D:\Program Files\OpenServer\domains\store.local\resources\sass\site\app.scss */"./resources/sass/site/app.scss");
 
 
 /***/ })
