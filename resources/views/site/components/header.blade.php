@@ -5,56 +5,38 @@
             <div class="row">
                 <div class="col-lg-4 col-md-2 col-sm-3 col-xs-12 logo-block">
                     <!-- Header Logo -->
-                    <div class="logo"> <a title="HTML Website Template" href="index.html"><img alt="HTML Website Template" src="images/site/logo.png"> </a> </div>
+                    <div class="logo"> <a title="{{ __('Brand logo') }}" href="{{ asset('/') }}"><img alt="{{ __('Brand logo') }}" src="{{ asset('images/site/logo.png') }}"> </a> </div>
                     <!-- End Header Logo -->
                 </div>
                 <!-- Header Language -->
                 <div class="col-xs-12 col-sm-9 col-md-9 col-lg-8 pull-right hidden-xs">
                     <div class="dropdown block-language-wrapper">
 
-                            <a role="button" data-toggle="dropdown" class="block-language dropdown-toggle" href="#">
-                                <img src="{{ asset('images/site/language/' . LaravelLocalization::getCurrentLocale()  . '.png') }}" alt="language">{{ LaravelLocalization::getCurrentLocale() }}<span class="caret"></span>
+                            <a role="button" data-toggle="dropdown" class="block-language dropdown-toggle" href="#" style="text-transform: uppercase;">
+                              {{ LaravelLocalization::getCurrentLocale() }}<span class="caret"></span>
                             </a>
 
                         <ul class="dropdown-menu" role="menu">
                             @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                <li role="presentation"> <a href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, []) }}"><img src="{{ asset('images/site/language/' . $localeCode  . '.png') }}" alt="language">{{ $localeCode == 'uk' ? 'ua' : $localeCode }}</a> </li>
+                                <li role="presentation">
+                                    <a style="text-transform: uppercase;" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, []) }}">{{ $localeCode == 'uk' ? 'ua' : $localeCode }}</a>
+                                </li>
                             @endforeach
                         </ul>
                     </div>
                     <!-- End Header Language -->
 
-                    <!-- Header Currency -->
-                    <div class="dropdown block-currency-wrapper"> <a role="button" data-toggle="dropdown" class="block-currency dropdown-toggle" href="#"> USD <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li role="presentation"><a href="#"> $ - Dollar </a> </li>
-                            <li role="presentation"><a href="#"> £ - Pound </a> </li>
-                            <li role="presentation"><a href="#"> € - Euro </a> </li>
-                        </ul>
-                    </div>
-                    <!-- End Header Currency -->
-                    <div class="welcome-msg hidden-xs"> Default welcome msg! </div>
-
                     <!-- Header Top Links -->
                     <div class="toplinks">
                         <div class="links">
-                            <div class="myaccount"><a title="My Account" href="login.html"><span class="hidden-xs">My Account</span></a> </div>
-                            <div class="check"><a title="Checkout" href="checkout.html"><span class="hidden-xs">Checkout</span></a> </div>
-                            <div class="demo"><a title="Blog" href="blog.html"><span class="hidden-xs">Blog</span></a> </div>
-                            <!-- Header Company -->
-                            <div class="dropdown block-company-wrapper hidden-xs"> <a role="button" data-toggle="dropdown" class="block-company dropdown-toggle" href="#"> Company <span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li role="presentation"><a href="about_us.html"> About Us </a> </li>
-                                    <li role="presentation"><a href="#"> Customer Service </a> </li>
-                                    <li role="presentation"><a href="#"> Privacy Policy </a> </li>
-                                    <li role="presentation"><a href="sitemap.html">Site Map </a> </li>
-                                    <li role="presentation"><a href="#">Search Terms </a> </li>
-                                    <li role="presentation"><a href="#">Advanced Search </a> </li>
-                                </ul>
-                            </div>
-                            <!-- End Header Company -->
 
-                            <div class="login"><a href="login.html"><span class="hidden-xs">Log In</span></a> </div>
+                            <div class="myaccount"><a title="My Account" href="{{ route('site.resource', 'about-us') }}"><span class="hidden-xs">{{ __('About us') }}</span></a> </div>
+
+                            <div class="check"><a title="Checkout" href="{{ route('site.contacts') }}"><span class="hidden-xs">{{ __('Contacts') }}</span></a> </div>
+
+                            <div class="demo"><a title="Blog" href="{{ route('site.blog') }}"><span class="hidden-xs">{{ __('Blog') }}</span></a> </div>
+
+                            {{--<div class="login"><a href="login.html"><span class="hidden-xs">Log In</span></a> </div>--}}
                         </div>
                     </div>
                     <!-- End Header Top Links -->
@@ -73,7 +55,7 @@
                 <div class="mega-container visible-lg visible-md visible-sm">
                     <div class="navleft-container">
                         <div class="mega-menu-title">
-                            <h3><i class="fa fa-navicon"></i> All Categories</h3>
+                            <h3><i class="fa fa-navicon"></i>{{ __('All categories') }}</h3>
                         </div>
                         @include('site.components.categories')
                     </div>
@@ -82,21 +64,8 @@
             <div class="col-lg-7 col-md-5 col-sm-5 col-xs-3 hidden-xs category-search-form">
                 <div class="search-box">
                     <form id="search_mini_form" action="#" method="get">
-                        <select name="cat" id="cat" class="cate-dropdown hidden-sm hidden-md">
-                            <option>All Categories</option>
-                            <option value="1014">Electronics</option>
-                            <option value="1035">Furniture</option>
-                            <option value="1051">Boys</option>
-                            <option value="1052">Girls</option>
-                            <option value="1053">Bags</option>
-                            <option value="1054">Shoes</option>
-                            <option value="962">Women</option>
-                            <option value="988">Men</option>
-                        </select>
-
-                        <!-- Autocomplete End code -->
                         <input id="search" type="text" name="q" value="Search entire store here..." class="searchbox" maxlength="128">
-                        <button type="submit" title="Search" class="search-btn-bg" id="submit-button"><span>Search</span></button>
+                        <button type="submit" title="Search" class="search-btn-bg" id="submit-button"><span>{{ __('Search') }}</span></button>
                     </form>
                 </div>
             </div>

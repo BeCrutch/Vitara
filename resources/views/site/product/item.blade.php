@@ -3,7 +3,7 @@
         <div class="item-img">
             <div class="item-img-info">
                 <a class="product-image" title="Retis lapen casen" href="{{ route('site.resource', $product->slug) }}">
-                    <img alt="Retis lapen casen" src="https://isw.b2b-sandi.com.ua/imagecache/large/2/2/22021.jpg"></a>
+                    <img class="lazy img-data-path" alt="{{ $product->name }}" data-src="https://isw.b2b-sandi.com.ua/imagecache/large/{{ Str::substr($product->sku, 0, 1) }}/{{ Str::substr($product->sku, 1, 1) }}/{{ $product->sku }}.jpg" src="{{ asset('images/site/white_fone_150x150.webp') }}"></a>
                 <!-- Links -->
                 <div class="box-hover">
                     <ul class="add-to-links">

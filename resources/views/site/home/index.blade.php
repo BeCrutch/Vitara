@@ -120,14 +120,16 @@
 {{--                        </div>--}}
 {{--                    </div>--}}
                 </div>
-                @isset($product_banner)
-                    <div class="col-md-3 hot-deal">
-                        <ul class="products-grid">
-                            <li class="right-space two-height">
-                                @include('site.product.item', ['product' => $product_banner])
-                            </li>
-                        </ul>
-                    </div>
+                @isset($hot_deal_product)
+                    @foreach($hot_deal_product as $product)
+                        <div class="col-md-3 hot-deal">
+                            <ul class="products-grid">
+                                <li class="right-space two-height">
+                                    @include('site.product.item')
+                                </li>
+                            </ul>
+                        </div>
+                    @endforeach
                 @endisset
             </div>
         </div>

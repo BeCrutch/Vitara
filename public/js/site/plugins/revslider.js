@@ -17932,7 +17932,7 @@ function revslider_showDoubleJqueryError(e) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Program Files\OpenServer\domains\store.local\resources\js\site\template\revslider.js */"./resources/js/site/template/revslider.js");
+module.exports = __webpack_require__(/*! D:\Program Files\OpenServer\domains\vitara.local\resources\js\site\template\revslider.js */"./resources/js/site/template/revslider.js");
 
 
 /***/ })

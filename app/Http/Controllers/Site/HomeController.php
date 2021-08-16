@@ -10,6 +10,8 @@ class HomeController
 {
   public function index()
   {
-    return view('site.home.index');
+      $sku = [21650];
+      $hot_deal_product = Product::where('details->published', 1)->whereIn('details->sku', $sku)->get();
+      return view('site.home.index', compact('hot_deal_product'));
   }
 }

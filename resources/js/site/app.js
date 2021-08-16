@@ -9,7 +9,7 @@
 // jquery
 //window.$ = window.jQuery = require('jquery');
 
-// template
+/* template */
 require('./template/jquery.min');
 require('./template/bootstrap.min');
 //require('./template/revslider');
@@ -21,8 +21,12 @@ require('./template/cloud-zoom');
 require('./template/jquery.fancybox');
 require('./template/jquery.flexslider');
 
-//plugins
-require('lazysizes');
+/* plugins */
+// require('lazysizes');
+
+/* custom plugins */
+require('./plugins/imgLazyLoad');
+
 
 //components
 require('./components/characteristics');
