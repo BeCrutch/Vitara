@@ -12,32 +12,28 @@
                 <div class="col-md-3 col-xs-12 col-sm-6">
                     <div class="feature-box first"><span class="fa fa-truck">&nbsp;</span>
                         <div class="content">
-                            <h3>FREE SHIPPING WORLDWIDE</h3>
-                            Lorem ipsum dolor sit amet.
+                            <h3>{{ __('Free shipping across Ukraine') }}</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-xs-12 col-sm-6">
                     <div class="feature-box"><span class="fa fa-headphones">&nbsp;</span>
                         <div class="content">
-                            <h3>24X7 CUSTOMER SUPPORT</h3>
-                            Lorem ipsum dolor sit amet.
+                            <h3>{{ __('Customer support 24x7') }}</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-xs-12 col-sm-6">
                     <div class="feature-box"><span class="fa fa-dollar">&nbsp;</span>
                         <div class="content">
-                            <h3>MONEY BACK GUARANTEE</h3>
-                            Lorem ipsum dolor sit amet.
+                            <h3>{{ __('Money back guarantee') }}</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 col-xs-12 col-sm-6">
                     <div class="feature-box last"><span class="fa fa-mobile">&nbsp;</span>
                         <div class="content">
-                            <h3>Hotline +(888) 123-4567</h3>
-                            Lorem ipsum dolor sit amet.
+                            <h3>{{ __('Hotline') }} <a href="tel:+8000000001">+(800) 000-00-01</a></h3>
                         </div>
                     </div>
                 </div>
@@ -51,7 +47,7 @@
             <div class="row">
                 <div class="col-md-9">
                     <ul>
-                        <li><img src="images/site/slide-img1.jpg" alt=""></li>
+                        <li><img src="{{ asset('images/site/home-slider/slide-1.jpg') }}" alt=""></li>
                     </ul>
 {{--                    <div id='rev_slider_4_wrapper' class='rev_slider_wrapper fullwidthbanner-container'>--}}
 {{--                        <div id='rev_slider_4' class='rev_slider fullwidthabanner'>--}}
@@ -143,32 +139,28 @@
                 <div class="col-lg-3 col-xs-12 col-sm-6">
                     <div class="feature-box first"><span class="fa fa-truck"></span>
                         <div class="content">
-                            <h3>FREE SHIPPING WORLDWIDE</h3>
-                            Lorem ipsum dolor sit amet.
+                            <h3>{{ __('Free shipping across Ukraine') }}</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-xs-12 col-sm-6">
                     <div class="feature-box"><span class="fa fa-headphones"></span>
                         <div class="content">
-                            <h3>24X7 CUSTOMER SUPPORT</h3>
-                            Lorem ipsum dolor sit amet.
+                            <h3>{{ __('Customer support 24x7') }}</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-xs-12 col-sm-6">
                     <div class="feature-box"><span class="fa fa-dollar"></span>
                         <div class="content">
-                            <h3>MONEY BACK GUARANTEE</h3>
-                            Lorem ipsum dolor sit amet.
+                            <h3>{{ __('Money back guarantee') }}</h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-xs-12 col-sm-6">
                     <div class="feature-box last"><span class="fa fa-mobile"></span>
                         <div class="content">
-                            <h3>Hotline +(888) 123-4567</h3>
-                            Lorem ipsum dolor sit amet.
+                            <h3>{{ __('Hotline') }} <a href="tel:+8000000001">+(800) 000-00-01</a></h3>
                         </div>
                     </div>
                 </div>
@@ -207,7 +199,7 @@
 
                 <div class="col-md-6 col-lg-4 popular-category cat-{{ $category->id }}">
                     <a class="popular-category__inner" href="{{ route('site.resource', $category->slug) }}">
-                        <img class="popular-category__inner--image lazyload no-src" src="{{ asset('images/site/default_white.jpg') }}" data-src="{{ asset('images/site/home-popular-category/' . $category->id . '_230.webp') }}" alt="{!! $category->getData('name') !!}">
+                        <img class="popular-category__inner--image lazy img-data-path no-src" src="{{ asset('images/site/default_white.jpg') }}" data-src="{{ asset('images/site/home-popular-category/' . $category->id . '_230.webp') }}" alt="{!! $category->getData('name') !!}">
                         <p class="popular-category__inner--name" style="font-size: 20px;">{!! $category->getData('name') !!}</p>
                     </a>
                 </div>
@@ -1354,20 +1346,21 @@
 
 
 
-    @php($products = \App\Product::joinLocalization()->whereExistsCategoryIds(5432)->where('details->published', 1)->where('details->price', '>' , 0)->limit(8)->get())
+    @php($category = \App\Product::joinLocalization()->whereExistsCategoryIds(5432)->where('details->published', 1)->where('details->price', '>' , 0)->limit(8)->get())
     <!-- bestsell slider -->
     <section class="bestsell-pro">
         <div class="container">
             <div class="slider-items-products">
                 <div class="bestsell-block">
                     <div id="bestsell-slider" class="product-flexslider hidden-buttons">
-                        <div class="home-block-inner"><a href="grid.html"><img src="images/site/banner6.jpg"
-                                                                               alt="add banner"></a>
+                        <div class="home-block-inner">
+                            <a href="grid.html">
+                                <img src="http://placehold.it/300x450" alt="Змішувач для ванни"></a>
                             <div class="banner-content">
-                                <div class="banner-text">Cameras</div>
-                                <div class="banner-text1">20% off</div>
-                                <p>on selected products</p>
-                                <a href="#" class="view-bnt">Shop now</a></div>
+                                <div class="banner-text">Змішувач для ванни</div>
+                                <div class="banner-text1" hidden></div>
+                                <p>Змішувач для ванни Lidz (CRM)-20 38 005 10 New</p>
+                                <a href="#" class="view-bnt">Перейти сейчас</a></div>
                         </div>
                         <div class="block-title">
                             <h2>Змішувач для ванни</h2>
@@ -1376,7 +1369,7 @@
 {{--                            </div>--}}
                         </div>
                         <div class="slider-items slider-width-col4 products-grid block-content">
-                           @foreach($products as $product)
+                           @foreach($category as $product)
                                @include('site.product.item')
                             @endforeach
                         </div>
@@ -1869,8 +1862,8 @@
 {{--    </div>--}}
     <!-- End Testimonials Box Slider -->
 
-    <!-- Latest Blog -->
-    <div class="container">
+    <!-- Latest Blog hidden-->
+    <div class="container" hidden>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="blog-outer-container">
@@ -1945,8 +1938,8 @@
     </div>
     <!-- End Latest Blog -->
 
-    <!-- Brand Logo -->
-    <div class="brand-logo">
+    <!-- Brand Logo hidden-->
+    <div class="brand-logo" hidden>
         <div class="container">
             <div class="slider-items-products">
                 <div id="brand-logo-slider" class="product-flexslider hidden-buttons">

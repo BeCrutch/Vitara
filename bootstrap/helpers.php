@@ -55,7 +55,7 @@ if (!function_exists('img')) {
             $alt = !empty($data['alt']) ? ' alt="' . htmlspecialchars($data['alt']) . '"': '';
 
             if (isset($data['data-src'])) {
-                $uri = 'data-src="' . \App\Classes\ImportImage::getImage($data) . '" src="' . asset('images/site/default_white.jpg') . '"';
+                $uri = 'data-src="' . \App\Classes\ImportImage::getImage($data) . '" src="' . asset('images/site/white_fone.webp') . '"';
             } else {
                 $uri = ' src="' . \App\Classes\ImportImage::getImage($data) . '"';
             }

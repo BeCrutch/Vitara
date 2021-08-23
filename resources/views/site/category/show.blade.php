@@ -40,47 +40,44 @@
 
     @if( $category->descendants->isNotEmpty() )
 
-        <section class="section-md bg-white">
+        <section class="main-container col2-left-layout">
 
-            <div class="shell">
+            <div class="container">
 
-                <div class="range range-60 range-md-reverse">
+                <div class="row">
 
-                    <div class="section-sm">
+                    @foreach($category->descendants as $category)
 
-                        <div class="range range-center range-70">
+                        <div class="col-xs-6 col-sm-4 col-lg-3">
 
-                            @foreach($category->descendants as $category)
+                            <a href="{{ route('site.resource', $category->slug) }}">
 
-                                <div class="cell-sm-6 cell-lg-4">
-                                    <a href="{{ route('site.resource', $category->slug) }}">
-                                        <div class="product product-grid">
+                                <div>
 
-                                            <div class="product-img-wrap w-100" style="padding: 30px;">
-                                                {{--<img alt="" src="http://lidz.loc.ua/storage/product/1000-21650.jpg">--}}
-                                                {!! img(['type' => 'product', 'sku' => $category->product->sku, 'size' => 600, 'alt' => $category->name]) !!}
-                                            </div>
-                                            <div class="product-caption">
-                                                <div class="product-title">{{ $category->name }}</div>
-                                            </div>
+                                    <div class="w-100" style="padding: 30px;">
 
-                                        </div>
+                                        {!! img(['type' => 'product', 'class' => ['lazy', 'img-data-path'], 'data-src' => true, 'sku' => $category->product->sku, 'size' => 600, 'alt' => $category->name]) !!}
 
-                                    </a>
+                                    </div>
+
+                                    <div class="text-center">
+                                        <span>{{ $category->name }}</span>
+                                    </div>
 
                                 </div>
 
-                            @endforeach
+                            </a>
 
                         </div>
 
-                    </div>
+                    @endforeach
 
                 </div>
 
             </div>
 
         </section>
+
 
     @else
 
@@ -91,33 +88,33 @@
                     <div class="col-sm-9 col-sm-push-3">
                         <div class="category-description std">
                             <!-- Category slider -->
-                            <div class="slider-items-products">
-                                <div id="category-desc-slider" class="product-flexslider hidden-buttons">
-                                    <div class="slider-items slider-width-col1 owl-carousel owl-theme">
+{{--                            <div class="slider-items-products">--}}
+{{--                                <div id="category-desc-slider" class="product-flexslider hidden-buttons">--}}
+{{--                                    <div class="slider-items slider-width-col1 owl-carousel owl-theme">--}}
 
-                                        <!-- Item -->
-                                        <div class="item"> <a href="#"><img alt="" src="images/category-img1.jpg"></a>
-                                            <div class="cat-img-title cat-bg cat-box">
-                                                <div class="small-tag">Big Sale</div>
-                                                <h2 class="cat-heading">Mobiles Collection</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                            </div>
-                                        </div>
-                                        <!-- End Item -->
+{{--                                        <!-- Item -->--}}
+{{--                                        <div class="item"> <a href="#"><img alt="" src="images/category-img1.jpg"></a>--}}
+{{--                                            <div class="cat-img-title cat-bg cat-box">--}}
+{{--                                                <div class="small-tag">Big Sale</div>--}}
+{{--                                                <h2 class="cat-heading">Mobiles Collection</h2>--}}
+{{--                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
+{{--                                        <!-- End Item -->--}}
 
-                                        <!-- Item -->
-                                        <div class="item"> <a href="#"><img alt="" src="images/category-img2.jpg"></a>
-                                            <div class="cat-img-title cat-bg cat-box">
-                                                <div class="small-tag">Street Style</div>
-                                                <h2 class="cat-heading">New Season</h2>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                            </div>
-                                            <!-- End Item -->
+{{--                                        <!-- Item -->--}}
+{{--                                        <div class="item"> <a href="#"><img alt="" src="images/category-img2.jpg"></a>--}}
+{{--                                            <div class="cat-img-title cat-bg cat-box">--}}
+{{--                                                <div class="small-tag">Street Style</div>--}}
+{{--                                                <h2 class="cat-heading">New Season</h2>--}}
+{{--                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>--}}
+{{--                                            </div>--}}
+{{--                                            <!-- End Item -->--}}
 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                             <!-- End Category slider -->
                         </div>
 

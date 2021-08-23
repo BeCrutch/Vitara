@@ -11675,9 +11675,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   console.log('ImageLazyLoading read!');
   var options = {
     noImg: 'no_img.jpg',
-    defaultImg: window.location.origin + '/img/no_img.jpg',
+    defaultImg: window.location.origin + '/images/site/no_img.jpg',
     //альтернатива: 'https://b2b-sandi.com.ua/imagecache/150x150/no_img.jpg'
-    defaultLargeImg: 'http://b2b-sandi.com.ua/imagecache/large/no_img.jpg'
+    defaultLargeImg: ''
   };
 
   var LazyLoadingImages = /*#__PURE__*/function () {

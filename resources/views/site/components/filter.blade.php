@@ -24,7 +24,7 @@
         @if(count($valuesForView[$characteristic->id]) > 1)
             <div class="block block-poll">
                 <div class="block-title">{{ $characteristic->getData('name') }}</div>
-                <ul id="poll-answers">
+                <ul id="poll-answers" style="padding: 15px;">
                     @foreach ($valuesForView[$characteristic->id] as $value)
                         <li>
                             <div class="form-group form-check custom-checkbox">
