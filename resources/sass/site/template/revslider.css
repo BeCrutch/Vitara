@@ -464,7 +464,7 @@ website:   	http://www.magikcommerce.com/
     z-index: 100;
     cursor: pointer;
     position: relative;
-    background: url(../images/left-a.png) no-repeat top left;
+    background: url(../../images/site/left-a.png) no-repeat top left;
     width: 40px;
     height: 40px;
 }
@@ -473,7 +473,7 @@ website:   	http://www.magikcommerce.com/
     z-index: 100;
     cursor: pointer;
     position: relative;
-    background: url(../images/right-a.png) no-repeat top left;
+    background: url(../../images/site/right-a.png) no-repeat top left;
     width: 40px;
     height: 40px;
 }
@@ -490,7 +490,7 @@ website:   	http://www.magikcommerce.com/
     z-index: 90;
     cursor: pointer;
     position: relative;
-    background: #014693 url(../images/left-a.png) no-repeat 13px 8px;
+    background: #014693 url(../../images/site/left-a.png) no-repeat 13px 8px;
     width: 40px;
     height: 45px;
     left: 0px !important;
@@ -502,7 +502,7 @@ website:   	http://www.magikcommerce.com/
     z-index: 100;
     cursor: pointer;
     position: relative;
-    background: #014693 url(../images/right-a.png) no-repeat 13px 8px;
+    background: #014693 url(../../images/site/right-a.png) no-repeat 13px 8px;
     width: 40px;
     height: 45px;
     right: 0 !important;

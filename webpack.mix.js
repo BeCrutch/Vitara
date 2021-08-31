@@ -21,8 +21,6 @@ mix
         processCssUrls: false
     })
     .js('resources/js/site/app.js', 'public/js/site')
-    .js('resources/js/site/template/revslider.js', 'public/js/site/plugins')
-
 
 mix.autoload({
     jquery: ['$', 'window.jQuery', "jQuery", "window.$", "jquery", "window.jquery"]

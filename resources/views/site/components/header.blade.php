@@ -61,15 +61,31 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-5 col-sm-5 col-xs-3 hidden-xs category-search-form">
+
+            <div class="col-lg-7 col-md-5 col-sm-5 col-xs-3 hidden-xs category-search-form">
                 <div class="search-box">
                     <form id="search_mini_form" action="#" method="get">
+                        <select name="cat" id="cat" class="cate-dropdown hidden-sm hidden-md">
+                            <option>All Categories</option>
+                            <option value="1014">Electronics</option>
+                            <option value="1035">Furniture</option>
+                            <option value="1051">Boys</option>
+                            <option value="1052">Girls</option>
+                            <option value="1053">Bags</option>
+                            <option value="1054">Shoes</option>
+                            <option value="962">Women</option>
+                            <option value="988">Men</option>
+                        </select>
+
+                        <!-- Autocomplete End code -->
                         <input id="search" type="text" name="q" value="{{ __('Enter your search...') }}" class="searchbox" maxlength="128">
                         <button type="submit" title="Search" class="search-btn-bg" id="submit-button"><span>{{ __('Search') }}</span></button>
                     </form>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 card_wishlist_area" style="display: flex; justify-content:flex-end;">
+
+
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 card_wishlist_area" style="display: flex; justify-content:flex-end;">
 
                 <div class="mm-toggle-wrap">
                     <div class="mm-toggle"><i class="fa fa-align-justify"></i><span class="mm-label">{{ __('Menu') }}</span> </div>
@@ -77,8 +93,13 @@
 
                 <div class="top-cart-contain" style="margin-right: 15px;">
                     <!-- Top Cart -->
+
                     <div class="mini-cart">
-                        <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle"> <a href="shopping_cart.html"><span class="price">{{ __('My Cart') }}</span> <span class="cart_count">2</span> </a> </div>
+
+                        <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle">
+                            <a href="shopping_cart.html"><span class="price">{{ __('Cart') }}</span>
+                                <span class="cart_count">2</span></a>
+                        </div>
                         <div>
                             <div class="top-cart-content">
 
