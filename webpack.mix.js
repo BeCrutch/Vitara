@@ -20,7 +20,7 @@ mix
     .options({
         processCssUrls: false
     })
-    .js('resources/js/site/app.js', 'public/js/site')
+    .js('resources/js/site/app.js', 'public/js/site');
 
 mix.autoload({
     jquery: ['$', 'window.jQuery', "jQuery", "window.$", "jquery", "window.jquery"]

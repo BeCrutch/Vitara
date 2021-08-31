@@ -27,7 +27,6 @@ require('./template/jquery.flexslider');
 /* custom plugins */
 require('./plugins/imgLazyLoad');
 
-
 //components
 require('./components/characteristics');
 

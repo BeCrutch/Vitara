@@ -1,6 +1,5 @@
 {
     "/js/admin/resourses/create-or-edit.js": "/js/admin/resourses/create-or-edit.js",
     "/css/site/app.css": "/css/site/app.css",
-    "/js/site/app.js": "/js/site/app.js",
-    "/js/site/plugins/revslider.js": "/js/site/plugins/revslider.js"
+    "/js/site/app.js": "/js/site/app.js"
 }
