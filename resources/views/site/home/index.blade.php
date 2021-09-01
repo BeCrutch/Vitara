@@ -197,7 +197,7 @@
                 <div class="bestsell-block">
                     <div id="bestsell-slider" class="product-flexslider hidden-buttons">
                         <div class="home-block-inner">
-                            <a href="grid.html">
+                            <a href="#">
                                 <img src="http://placehold.it/300x450" alt="Змішувач для ванни"></a>
                             <div class="banner-content">
                                 <div class="banner-text">Змішувач для ванни</div>
@@ -227,11 +227,12 @@
     {{--@php($category = \App\Product::joinLocalization()->whereExistsCategoryIds(5432)->withCategory()->where('details->published', 1)->where('details->price', '>' , 0)->limit(8)->get())--}}
 
     <!-- Special Product Slider -->
+
     <section class="new-arrivals-pro">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-4 col-xs-12 featured-add-box">
-                    <div class="featured-add-inner"><a href="#"> <img src="images/site/banner7.jpg" alt="f-img"></a>
+                    <div class="featured-add-inner"><a href="#"> <img src="http://placehold.it/300x450" alt="f-img"></a>
                         <div class="banner-content">
                             <div class="banner-text">Grinder Mixer</div>
                             <div class="banner-text1">49% off</div>
@@ -245,14 +246,13 @@
                             <div id="new-arrivals-slider" class="product-flexslider hidden-buttons">
                                 <div class="home-block-inner">
                                     <div class="block-title">
-                                        <h2>Featured Product</h2>
+                                        <h2>ЗМІШУВАЧ ДЛЯ ВАННИ</h2>
                                     </div>
                                 </div>
                                 <div class="slider-items slider-width-col4 products-grid block-content">
                                     @foreach($category as $product)
                                         @include('site.product.item')
                                     @endforeach
-
                                 </div>
                             </div>
                         </div>
@@ -261,168 +261,12 @@
             </div>
         </div>
     </section>
+
     <!-- End Special Product Slider -->
 
-    <!-- Testimonials Box Slider -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-12 testimonials">
-                <div class="ts-testimonial-widget">
-                    <div class="slider-items-products">
-                        <div id="testimonials-slider" class="product-flexslider hidden-buttons home-testimonials">
-                            <div class="slider-items slider-width-col4 fadeInUp">
-                                <div class="holder">
-                                    <div class="thumb"><img src="images/site/member1.jpg" alt="testimonials img"></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, Lid est laborum dolo
-                                        rumes fugats untras. dolore magna aliquam erat volutpat. Aenean est auctorwisiet
-                                        urna. Aliquam erat volutpat.</p>
-                                    <div class="line"></div>
-                                    <strong class="name">Saraha Smith</strong></div>
-                                <div class="holder">
-                                    <div class="thumb"><img src="images/site/member2.jpg" alt="testimonials img"></div>
-                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-                                        turpis egestas. Nam sapien nunc, convallis in sollicitudin in, ullamcorper ad
-                                        eulibero. Etiam cursus eu ipsum egestas.</p>
-                                    <div class="line"></div>
-                                    <strong class="name">Mark doe</strong></div>
-                                <div class="holder">
-                                    <div class="thumb"><img src="images/site/member3.jpg" alt="testimonials img"></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Duis ac turpis.
-                                        Donec sit amet eros.</p>
-                                    <div class="line"></div>
-                                    <strong class="name">John Doe</strong></div>
-                                <div class="holder">
-                                    <div class="thumb"><img src="images/site/member4.jpg" alt="testimonials img"></div>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-                                        euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
-                                        minim veniam, quis nostrud exerci.</p>
-                                    <div class="line"></div>
-                                    <strong class="name">Stephen Doe</strong></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    @include('site.home.components.testimonials')
 
-            <!-- Custom Slider -->
-            <div class="col-md-6 col-sm-12 custom-slider-wrap">
-                <div class="custom-slider-inner">
-                    <div class="home-custom-slider">
-                        <div>
-                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li class="active" data-target="#carousel-example-generic" data-slide-to="0"></li>
-                                    <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
-                                    <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
-                                </ol>
-                                <div class="carousel-inner">
-                                    <div class="item active"><img src="images/site/custom-slide2.jpg" alt="slide3">
-                                        <div class="carousel-caption">
-                                            <h3><a title=" Sample Product" href="#">spring <strong>2018</strong></a>
-                                            </h3>
-                                            <span>Best Laptop</span> <a class="link" href="#">shop collection</a></div>
-                                    </div>
-                                    <div class="item"><img src="images/site/custom-slide3.jpg" alt="slide2">
-                                        <div class="carousel-caption"><span>Huge <strong>sale</strong></span>
-                                            <p>save up to <strong>70% OFF</strong> Electronics collection</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                                            <a class="link" href="#">Shop Now</a></div>
-                                    </div>
-                                    <div class="item"><img src="images/site/custom-slide1.jpg" alt="slide1">
-                                        <div class="carousel-caption"><span>New <strong>Arrivals</strong></span>
-                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy nibh euismod tincidunt ut laoreet.</p>
-                                            <a class="link" href="#">View collection</a></div>
-                                    </div>
-                                </div>
-                                <a class="left carousel-control" href="#" data-slide="prev"> <span class="sr-only">Previous</span>
-                                </a> <a class="right carousel-control" href="#" data-slide="next"> <span
-                                        class="sr-only">Next</span> </a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Testimonials Box Slider -->
-
-    <!-- Latest Blog hidden-->
-    <div class="container" >
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="blog-outer-container">
-                    <div class="block-title">
-                        <h2>Latest Blog</h2>
-                        <div class="hidden-xs">Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry.
-                        </div>
-                    </div>
-                    <div class="blog-inner">
-                        <div class="col-lg-4 col-md-4 col-sm-4 blog-preview_item">
-                            <h4 class="blog-preview_title"><a href="blog_single_post.html">Standard blog post with
-                                    photo</a></h4>
-                            <div class="entry-thumb image-hover2"><a href="blog_single_post.html"> <img alt="Blog"
-                                                                                                        src="images/site/blog-img1.jpg">
-                                </a></div>
-                            <div class="blog-preview_info">
-                                <ul class="post-meta">
-                                    <li><i class="fa fa-user"></i>posted by <a href="#">admin</a></li>
-                                    <li><i class="fa fa-comments"></i><a href="#">8 comments</a></li>
-                                    <li><i class="fa fa-clock-o"></i><span class="day">12</span> <span
-                                            class="month">Feb</span></li>
-                                </ul>
-                                <div class="blog-preview_desc">Lid est laborum dolo rumes fugats untras. Etharums ser
-                                    quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers
-                                    sadips.
-                                </div>
-                                <a class="blog-preview_btn" href="blog_single_post.html">READ MORE</a></div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 blog-preview_item">
-                            <h4 class="blog-preview_title"><a href="blog_single_post.html">Standard blog post with
-                                    photo</a></h4>
-                            <div class="entry-thumb image-hover2"><a href="blog_single_post.html"> <img alt="Blog"
-                                                                                                        src="images/site/blog-img2.jpg">
-                                </a></div>
-                            <div class="blog-preview_info">
-                                <ul class="post-meta">
-                                    <li><i class="fa fa-user"></i>posted by <a href="#">admin</a></li>
-                                    <li><i class="fa fa-comments"></i><a href="#">4 comments</a></li>
-                                    <li><i class="fa fa-clock-o"></i><span class="day">25</span> <span
-                                            class="month">Jan</span></li>
-                                </ul>
-                                <div class="blog-preview_desc">Ut tellus dolor, dapibus eget, elementum vel, cursus
-                                    eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.
-                                    Donec sit amet eros.
-                                </div>
-                                <a class="blog-preview_btn" href="blog_single_post.html">READ MORE</a></div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 blog-preview_item">
-                            <h4 class="blog-preview_title"><a href="blog_single_post.html">Standard blog post with
-                                    photo</a></h4>
-                            <div class="entry-thumb image-hover2"><a href="blog_single_post.html"> <img alt="Blog"
-                                                                                                        src="images/site/blog-img3.jpg">
-                                </a></div>
-                            <div class="blog-preview_info">
-                                <ul class="post-meta">
-                                    <li><i class="fa fa-user"></i>posted by <a href="#">admin</a></li>
-                                    <li><i class="fa fa-comments"></i><a href="#">4 comments</a></li>
-                                    <li><i class="fa fa-clock-o"></i><span class="day">10</span> <span
-                                            class="month">Jan</span></li>
-                                </ul>
-                                <div class="blog-preview_desc">Ut tellus dolor, dapibus eget, elementum vel, cursus
-                                    eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.
-                                    Donec sit amet eros.
-                                </div>
-                                <a class="blog-preview_btn" href="blog_single_post.html">READ MORE</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Latest Blog -->
-
+    @include('site.home.components.blog-posts')
 
 @endsection
 

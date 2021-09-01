@@ -12003,7 +12003,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-alert('work!');
+
 
 /***/ }),
 
@@ -24220,7 +24220,7 @@ if (typeof Object.create !== "function") {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Project\OpenServer\domains\vitara.local\resources\js\site\app.js */"./resources/js/site/app.js");
+module.exports = __webpack_require__(/*! D:\Program Files\OpenServer\domains\vitara.local\resources\js\site\app.js */"./resources/js/site/app.js");
 
 
 /***/ })
