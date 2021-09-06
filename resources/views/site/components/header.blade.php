@@ -30,6 +30,8 @@
                     <div class="toplinks">
                         <div class="links">
 
+                            <div class="myaccount"><a title="My Account" href="#"><span class="hidden-xs">Ура, все заработало</span></a> </div>
+
                             <div class="myaccount"><a title="My Account" href="{{ route('site.resource', 'about-us') }}"><span class="hidden-xs">{{ __('About us') }}</span></a> </div>
 
                             <div class="check"><a title="Checkout" href="{{ route('site.contacts') }}"><span class="hidden-xs">{{ __('Contacts') }}</span></a> </div>
