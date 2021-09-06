@@ -88368,8 +88368,8 @@ tinymce_tinymce__WEBPACK_IMPORTED_MODULE_0___default.a.init(config);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Project\OpenServer\domains\vitara.local\resources\js\admin\resourses\create-or-edit.js */"./resources/js/admin/resourses/create-or-edit.js");
-module.exports = __webpack_require__(/*! C:\Project\OpenServer\domains\vitara.local\resources\sass\site\app.scss */"./resources/sass/site/app.scss");
+__webpack_require__(/*! D:\Program Files\OpenServer\domains\vitara.local\resources\js\admin\resourses\create-or-edit.js */"./resources/js/admin/resourses/create-or-edit.js");
+module.exports = __webpack_require__(/*! D:\Program Files\OpenServer\domains\vitara.local\resources\sass\site\app.scss */"./resources/sass/site/app.scss");
 
 
 /***/ })

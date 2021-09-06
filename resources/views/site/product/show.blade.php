@@ -66,18 +66,50 @@
                                         <div class="product-image">
 
                                             <div class="product-full">
-                                                <img id="product-zoom" src="products-images/product1.jpg" data-zoom-image="products-images/product1.jpg" alt="product-image"/>
+{{--                                                <img id="product-zoom" src="products-images/product1.jpg" data-zoom-image="products-images/product1.jpg" alt="product-image"/>--}}
+                                                {!! img(['type' => 'product', 'id' => 'product-zoom', 'sku' => $product->sku, 'size' => 600, 'alt' => $product->name]) !!}
                                             </div>
 
                                             <div class="more-views">
                                                 <div class="slider-items-products">
                                                     <div id="gallery_01" class="product-flexslider hidden-buttons product-img-thumb">
                                                         <div class="slider-items slider-width-col4 block-content">
-                                                            <div class="more-views-items"> <a href="#" data-image="products-images/product2.jpg" data-zoom-image="products-images/product2.jpg"> <img id="product-zoom"  src="products-images/product2.jpg" alt="product-image"/> </a></div>
-                                                            <div class="more-views-items"> <a href="#" data-image="products-images/product3.jpg" data-zoom-image="products-images/product3.jpg"> <img id="product-zoom"  src="products-images/product3.jpg" alt="product-image"/> </a></div>
-                                                            <div class="more-views-items"> <a href="#" data-image="products-images/product4.jpg" data-zoom-image="products-images/product4.jpg"> <img id="product-zoom"  src="products-images/product4.jpg" alt="product-image"/> </a></div>
-                                                            <div class="more-views-items"> <a href="#" data-image="products-images/product5.jpg" data-zoom-image="products-images/product5.jpg"> <img id="product-zoom"  src="products-images/product5.jpg" alt="product-image"/> </a> </div>
-                                                            <div class="more-views-items"> <a href="#" data-image="products-images/product6.jpg" data-zoom-image="products-images/product6.jpg"> <img id="product-zoom"  src="products-images/product6.jpg" alt="product-image" /> </a></div>
+
+
+
+                                                            @foreach($additional as $key => $uri)
+
+                                                                <div class="more-views-items">
+                                                                    <a href="#" data-image="{{ \App\Classes\ImportImage::getImage([
+                                                                            'type' => 'product',
+                                                                            'id' => 'product-zoom',
+                                                                            'sku' => $product->sku,
+                                                                            'size' => 600,
+                                                                            'alt' => $product->name,
+                                                                            'additional' => true,
+                                                                            'key' => $key
+                                                                         ]) }}" data-zoom-image="{{ \App\Classes\ImportImage::getImage([
+                                                                            'type' => 'product',
+                                                                            'id' => 'product-zoom',
+                                                                            'sku' => $product->sku,
+                                                                            'size' => 600,
+                                                                            'alt' => $product->name,
+                                                                            'additional' => true,
+                                                                            'key' => $key
+                                                                         ]) }}">
+                                                                        {!! img([
+                                                                            'type' => 'product',
+                                                                            'id' => 'product-zoom',
+                                                                            'sku' => $product->sku,
+                                                                            'size' => 600,
+                                                                            'alt' => $product->name,
+                                                                            'additional' => true,
+                                                                            'key' => $key
+                                                                         ]) !!}
+                                                                    </a>
+                                                                </div>
+
+                                                            @endforeach
                                                         </div>
                                                     </div>
                                                 </div>

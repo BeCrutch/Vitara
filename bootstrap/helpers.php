@@ -51,6 +51,7 @@ if (!function_exists('img')) {
 //        }
 
         if (!empty($data)) {
+            $id = !empty($data['id']) ? ' id="' . $data['id'] . '"' : '';
             $class = !empty($data['class']) ? ' class="' . implode(' ', $data['class']) . '"' : '';
             $alt = !empty($data['alt']) ? ' alt="' . htmlspecialchars($data['alt']) . '"': '';
 
@@ -60,7 +61,7 @@ if (!function_exists('img')) {
                 $uri = ' src="' . \App\Classes\ImportImage::getImage($data) . '"';
             }
 
-            $tag = '<img' . $class . $alt . $uri . ' />';
+            $tag = '<img' . $id . $class . $alt . $uri . ' />';
 
             Cache::put($ikey, $tag, now()->addMinutes(60));
 
